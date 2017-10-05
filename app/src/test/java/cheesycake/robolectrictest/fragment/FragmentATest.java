@@ -58,4 +58,11 @@ public class FragmentATest {
         Mockito.verify(mockPresenter, Mockito.times(1)).start();
     }
 
+    @Test
+    public void onCreateTest() {
+        fragmentA = new FragmentA();
+        startFragment(fragmentA);
+        assertNotNull(fragmentA.fragmentComponent);
+    }
+
 }
